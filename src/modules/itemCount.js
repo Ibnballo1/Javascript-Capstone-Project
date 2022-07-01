@@ -3,4 +3,4 @@ const itemCounter = (allMeals) => {
   return allItems;
 };
 
-export default itemCounter;
+module.exports = itemCounter;
