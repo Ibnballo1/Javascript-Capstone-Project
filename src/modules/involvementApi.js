@@ -1,5 +1,5 @@
 const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-const appID = 'QKa6LFszuxzqdWDMHQTc';
+const appID = 'jXZgiKMzDT5B7SmkaTBY';
 
 const addComment = async (mealId, username, comment) => {
   await fetch(`${involvementApi}/apps/${appID}/comments`, {

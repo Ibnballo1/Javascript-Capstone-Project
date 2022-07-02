@@ -1,6 +1,5 @@
-/*import { getData } from './get-items.js';
+import { getData } from './get-items.js';
 import { addNewComment, createCommentList } from './commentManager.js';
-
 const createPopup = (meal) => {
   const popupContainer = document.createElement('div');
   popupContainer.className = 'popupContainer';
@@ -16,7 +15,8 @@ const createPopup = (meal) => {
   <p class="meal-description">${meal.strCategoryDescription}</p>
   <div class="commentContainer">
   <h3><span id="commentCounter" class="commentCounter"></span> Comments</h3>
-  <ul class="commentList" id="commentList"></ul>
+  <ul class="commentList" id="commentList">
+  </ul>
   <h3>Add a comment</h3>
   <form class="commentForm">
   <input type="text" name="contentId" id="contentId" style="display:none" value="item${meal.idCategory}">
@@ -33,19 +33,23 @@ const createPopup = (meal) => {
     popupContainer.remove();
   });
 };
-
 const popup = () => {
-  const mealData = getData();
-  mealData.then((value) => {
-    for (let i = 0; i < value.length; i += 1) {
-      const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
-      commentButton.addEventListener('click', () => {
-        createPopup(value[i]);
-        setTimeout(createCommentList, 100);
-        setTimeout(addNewComment, 100);
-      });
-    }
-  });
+  console.log('comment created');
+  const btns = document.querySelectorAll('.comment-btn');
+  btns.forEach((btn)=>{
+    btn.addEventListener('click', (e)=> {
+     const id = e.target.id.slice(10)
+     console.log(id);
+     getData().then(({ listOfFood }) => {
+      console.log(listOfFood);
+        const food = getFood(listOfFood, id)[0]
+        console.log(food);
+        createPopup(food)
+      })
+    })
+  })
+  const getFood = (arr, id)=> {
+    return arr.filter(food=>food.idCategory==id)
+  };
 };
-
-export default popup;*/
+export default popup;
