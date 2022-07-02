@@ -34,18 +34,6 @@ const createPopup = (meal) => {
   });
 };
 
-const popup = () => {
-  const mealData = getData();
-  mealData.then((value) => {
-    for (let i = 0; i < value.length; i += 1) {
-      const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
-      commentButton.addEventListener('click', () => {
-        createPopup(value[i]);
-        setTimeout(createCommentList, 100);
-        setTimeout(addNewComment, 100);
-      });
-    }
-  });
-};
 
-export default popup;
+
+export default createPopup;

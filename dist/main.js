@@ -137,7 +137,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/logo.png */ \"./src/images/logo.png\");\n/* harmony import */ var _modules_display_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/display_list.js */ \"./src/modules/display_list.js\");\n/* harmony import */ var _modules_display_list_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_display_list_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _modules_createPopup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/createPopup.js */ \"./src/modules/createPopup.js\");\n\r\n\r\n\r\n\r\n\r\n_modules_display_list_js__WEBPACK_IMPORTED_MODULE_2___default()();\r\n(0,_modules_createPopup_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/logo.png */ \"./src/images/logo.png\");\n/* harmony import */ var _modules_display_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/display_list.js */ \"./src/modules/display_list.js\");\n\r\n\r\n\r\n\r\n(0,_modules_display_list_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://webpack/./src/index.js?");
 
 /***/ }),
 
@@ -178,9 +178,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!*************************************!*\
   !*** ./src/modules/display_list.js ***!
   \*************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("throw new Error(\"Module parse failed: Identifier 'newLikes' has already been declared (15:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| };\\n| \\n> const newLikes = () => {\\n|   const likeBtn = document.querySelectorAll('.like');\\n|   likeBtn.forEach((eachLike) => {\");\n\n//# sourceURL=webpack://webpack/./src/modules/display_list.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _getfood_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getfood.js */ \"./src/modules/getfood.js\");\n/* harmony import */ var _itemCount_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./itemCount.js */ \"./src/modules/itemCount.js\");\n/* harmony import */ var _itemCount_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_itemCount_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _get_items_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./get-items.js */ \"./src/modules/get-items.js\");\n/* harmony import */ var _createPopup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./createPopup.js */ \"./src/modules/createPopup.js\");\n// Displaying Images in the browser\r\n\r\n\r\n\r\n\r\n\r\nconst getObj = (arrLike) => {\r\n  const obj = {};\r\n  arrLike.forEach((eachLike) => {\r\n    obj[Number(eachLike.item_id)] = Number(eachLike.likes);\r\n  });\r\n  return obj;\r\n};\r\n\r\nconst newLikes = () => {\r\n  const likeBtn = document.querySelectorAll('.like');\r\n  likeBtn.forEach((eachLike) => {\r\n    eachLike.addEventListener('click', (e) => {\r\n      const id = Number(e.target.id.slice(4));\r\n      (0,_get_items_js__WEBPACK_IMPORTED_MODULE_2__.addLikes)({ item_id: id });\r\n      displayList();\r\n    });\r\n  });\r\n};\r\n\r\nconst displayList = () => {\r\n  (0,_get_items_js__WEBPACK_IMPORTED_MODULE_2__.getData)().then(({listOfFood, arrOfLikes}) => {\r\n    const displayItemBlock = document.getElementById('display-item-block');\r\n    const allFoods = document.getElementById('item-counter');\r\n    displayItemBlock.innerHTML = '';\r\n\r\n    const eachObj = getObj(arrOfLikes);\r\n    listOfFood.forEach((element) => {\r\n      const mealId = Number(element.idCategory);\r\n      const eachLike = eachObj[mealId];\r\n      const itemList = document.createElement('div');\r\n      itemList.classList = `display-item-${element.idCategory} display-items`;\r\n      allFoods.innerHTML = `${_itemCount_js__WEBPACK_IMPORTED_MODULE_1___default()(listOfFood)}`;\r\n\r\n      if (mealId in eachObj) {\r\n        itemList.innerHTML = (0,_getfood_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(element, eachLike);\r\n      } else {\r\n        itemList.innerHTML = (0,_getfood_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(element);\r\n      }\r\n      displayItemBlock.appendChild(itemList);\r\n    });\r\n    newLikes();\r\n    (0,_createPopup_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayList);\n\n//# sourceURL=webpack://webpack/./src/modules/display_list.js?");
 
 /***/ }),
 
@@ -195,6 +196,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/getfood.js":
+/*!********************************!*\
+  !*** ./src/modules/getfood.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst getFood = ({ idCategory, strCategoryThumb, strCategory }, likes = 0) => {\r\n  const eachList = `\r\n    <div class=\"item-img-block\">\r\n        <img class=\"images\" src=\"${strCategoryThumb}\" alt=\"Chicken\">\r\n    </div>\r\n    <div class=\"item-title-like\">\r\n        <h2 class=\"title-1 titles\">${strCategory}</h2>\r\n        <div class=\"likes-block\">\r\n            <button  id=\"like${idCategory}\" class=\"like like${idCategory}\">&#10084;</button>\r\n            <p class=\"item-likes likes\">${likes < 2 ? `${likes} Like` : `${likes}  Likes`}</p>\r\n        </div>\r\n    </div>\r\n    <button type=\"button\" id=\"commentBtn${idCategory}\" class=\"comment-btn\">Comments</button>\r\n  `;\r\n  return eachList;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getFood);\n\n//# sourceURL=webpack://webpack/./src/modules/getfood.js?");
+
+/***/ }),
+
 /***/ "./src/modules/involvementApi.js":
 /*!***************************************!*\
   !*** ./src/modules/involvementApi.js ***!
@@ -203,6 +215,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addComment\": () => (/* binding */ addComment),\n/* harmony export */   \"getComment\": () => (/* binding */ getComment)\n/* harmony export */ });\nconst involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';\r\nconst appID = 'QKa6LFszuxzqdWDMHQTc';\r\n\r\nconst addComment = async (mealId, username, comment) => {\r\n  await fetch(`${involvementApi}/apps/${appID}/comments`, {\r\n    method: 'POST',\r\n    body: JSON.stringify({\r\n      item_id: `${mealId}`,\r\n      username: `${username}`,\r\n      comment: `${comment}`,\r\n    }),\r\n    headers: {\r\n      'Content-type': 'application/json; charset=UTF-8',\r\n    },\r\n  });\r\n};\r\n\r\nconst getComment = async (mealId) => {\r\n  const getData = await fetch(`${involvementApi}/apps/${appID}/comments?item_id=${mealId}`, {\r\n    method: 'GET',\r\n    headers: {\r\n      'Content-type': 'application/json; charset=UTF-8',\r\n    },\r\n  });\r\n  let results = '';\r\n  if (getData.status !== 400) {\r\n    results = await getData.json();\r\n  }\r\n  return results;\r\n};\r\n\r\n\n\n//# sourceURL=webpack://webpack/./src/modules/involvementApi.js?");
+
+/***/ }),
+
+/***/ "./src/modules/itemCount.js":
+/*!**********************************!*\
+  !*** ./src/modules/itemCount.js ***!
+  \**********************************/
+/***/ ((module) => {
+
+eval("const itemCounter = (allMeals) => {\r\n  const allItems = allMeals.length;\r\n  return allItems;\r\n};\r\n\r\nmodule.exports = itemCounter;\n\n//# sourceURL=webpack://webpack/./src/modules/itemCount.js?");
 
 /***/ })
 
