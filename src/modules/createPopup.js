@@ -1,4 +1,4 @@
-import { getData } from './get-items.js';
+/*import { getData } from './get-items.js';
 import { addNewComment, createCommentList } from './commentManager.js';
 
 const createPopup = (meal) => {
@@ -34,6 +34,18 @@ const createPopup = (meal) => {
   });
 };
 
+const popup = () => {
+  const mealData = getData();
+  mealData.then((value) => {
+    for (let i = 0; i < value.length; i += 1) {
+      const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
+      commentButton.addEventListener('click', () => {
+        createPopup(value[i]);
+        setTimeout(createCommentList, 100);
+        setTimeout(addNewComment, 100);
+      });
+    }
+  });
+};
 
-
-export default createPopup;
+export default popup;*/

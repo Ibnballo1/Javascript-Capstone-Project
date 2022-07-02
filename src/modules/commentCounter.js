@@ -1,4 +1,4 @@
-import { getComment } from './involvementApi.js';
+/*import { getComment } from './involvementApi.js';
 
 const commentCounter = (IdMeal) => {
   const commentCounterEl = document.getElementById('commentCounter');
@@ -7,4 +7,4 @@ const commentCounter = (IdMeal) => {
     commentCounterEl.innerHTML = `${value.length}`;
   });
 };
-export default commentCounter;
+export default commentCounter;*/

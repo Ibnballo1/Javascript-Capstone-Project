@@ -1,4 +1,4 @@
-import { addComment, getComment } from './involvementApi.js';
+/*import { addComment, getComment } from './involvementApi.js';
 import commentCounter from './commentCounter.js';
 
 const createLi = (date, username, comment) => {
@@ -51,4 +51,4 @@ const addNewComment = () => {
   });
 };
 
-export { addNewComment, createCommentList };
+export { addNewComment, createCommentList };*/

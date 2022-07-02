@@ -2,7 +2,6 @@
 import getFood from './getfood.js';
 import itemCounter from './itemCount.js';
 import { getData, addLikes } from './get-items.js';
-import createPopup from './createPopup.js';
 
 const getObj = (arrLike) => {
   const obj = {};
@@ -18,22 +17,10 @@ const newLikes = () => {
     eachLike.addEventListener('click', (e) => {
       const id = Number(e.target.id.slice(4));
       addLikes({ item_id: id });
+      console.log('Before');
       displayList();
+      console.log('After');
     });
-  });
-};
-
-const popup = () => {
-  const mealData = getData();
-  mealData.then((value) => {
-    for (let i = 0; i < value.length; i += 1) {
-      const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
-      commentButton.addEventListener('click', () => {
-        createPopup(value[i]);
-        setTimeout(createCommentList, 100);
-        setTimeout(addNewComment, 100);
-      });
-    }
   });
 };
 
@@ -58,8 +45,8 @@ const displayList = () => {
       }
       displayItemBlock.appendChild(itemList);
     });
+    console.log('Inside Display');
     newLikes();
-    popup();
   });
 };
 
