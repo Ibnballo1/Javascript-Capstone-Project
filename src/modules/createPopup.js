@@ -34,16 +34,16 @@ const createPopup = (meal) => {
   });
 };
 const popup = () => {
-  console.log('comment created');
+  //console.log('comment created');
   const btns = document.querySelectorAll('.comment-btn');
   btns.forEach((btn)=>{
     btn.addEventListener('click', (e)=> {
      const id = e.target.id.slice(10)
-     console.log(id);
+    // console.log(id);
      getData().then(({ listOfFood }) => {
-      console.log(listOfFood);
+      //console.log(listOfFood);
         const food = getFood(listOfFood, id)[0]
-        console.log(food);
+        //console.log(food);
         createPopup(food)
       })
     })
