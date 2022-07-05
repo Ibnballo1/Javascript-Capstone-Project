@@ -18,6 +18,12 @@ Then cd into webpack.
 - GitHub: [@Ibnballo1](https://github.com/Ibnballo1/)
 - Linkedin: [Abdullateef Bello](https://www.linkedin.com/in/abdullateef-bello-1b8006228/)
 
+
+:adult: Guishny Desor
+
+- GitHub: [desorgui](https://github.com/desorgui/)
+- Linkedin: [Guishny Desor](https://www.linkedin.com/in/guishny-desor-5421a01a9/)
+
 # Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/Ibnballo1/webpack/issues)
