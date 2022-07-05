@@ -1,4 +1,4 @@
-# Webpack Project
+# WebAPI Project
 In this project I built a simple yet powerful webpack boilerplate, which will be used as a starting point for other projects.
 
 # Built With
@@ -15,6 +15,7 @@ Then cd into webpack.
 
 # Authors
 :adult: Abdullateef Bello
+:adult: Guishny Desor
 - GitHub: [@Ibnballo1](https://github.com/Ibnballo1/)
 - Linkedin: [Abdullateef Bello](https://www.linkedin.com/in/abdullateef-bello-1b8006228/)
 
@@ -26,15 +27,16 @@ Then cd into webpack.
 
 # Contributing
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/Ibnballo1/webpack/issues)
+Feel free to check the [issues page](https://github.com/Ibnballo1/Javascript-Capstone-Project/issues)
 
 # Live Demo
+[Live Demo](https://drive.google.com/file/d/1-MGugihTLDy_cMBu-77GvpM4L1Kwdmos/view?usp=sharing);
 
 # Show your support
 Kindly give a :hearts: if you like this.
 
 # Acknowledgement
-- I expressed my gratitude for everyone.
+- We expressed our gratitude for everyone.
 
 # License
-This project is [MIT](C:\Users\J T COMPUTER\Microverse-April18\Module2\week2\Day2\webpack\MIT.md).
+This project is [MIT](C:\Users\J T COMPUTER\Microverse-April18\Module2- JavaScript and Networking\Week5- Capstone Project\Javascript-Capstone-Project\MIT.md).

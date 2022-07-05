@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -20,8 +23,13 @@
   },
   "homepage": "https://github.com/Ibnballo1/webpack#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-jest": "^28.1.2",
     "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",

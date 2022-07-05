@@ -1,7 +1,256 @@
-body {
-  background-color: bisque;
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+
+:root {
+  --poppins-font: 'Poppins', sans-serif;
 }
 
-.hello {
-  color: red;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: var(--poppins-font);
+}
+
+/** General Rules **/
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 30px;
+}
+
+.image-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.heading,
+.nav-item {
+  font-family: var(--poppins-font);
+  font-style: normal;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.nav-list {
+  font-size: 16px;
+  color: #000;
+}
+
+.main-section {
+  padding: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-item-block,
+.display-item-block-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.display-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.45rem;
+  padding-bottom: 0.25rem;
+}
+
+.item-img-block {
+  border: 2px solid #000;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 1rem;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-title-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 12px;
+  margin-bottom: 1.75rem;
+}
+
+.titles {
+  font-family: var(--poppins-font);
+  font-weight: 500;
+}
+
+.fa-heart-o {
+  font-size: 24px;
+}
+
+.comment-btn {
+  display: flex;
+  margin: 0 auto;
+  border-radius: 3px;
+  height: 26px;
+  padding: 5px;
+  box-shadow: 3px 3px #000;
+}
+
+.popup {
+  position: relative;
+  background-color: #fff;
+  width: 80%;
+  max-width: 1200px;
+  top: 50px;
+  left: 10%;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-bottom: 100px;
+  width: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.712);
+  overflow-y: scroll;
+}
+
+.close-popup {
+  position: absolute;
+  top: 25px;
+  right: 5%;
+  font-size: 2em;
+}
+
+.popup img {
+  width: 100%;
+}
+
+.meal-title {
+  font-size: 2em;
+  font-family: var(--poppins-font);
+}
+
+.meal-description {
+  font-size: 1.1em;
+  font-family: var(--poppins-font);
+  margin-bottom: 30px;
+}
+
+ul.commentList {
+  display: block;
+  margin: 20px 0;
+}
+
+ul.commentList li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+.commentCounter {
+  padding: 9px 15px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.commentForm input,
+.commentForm .commentMessage {
+  outline: 0;
+  resize: vertical;
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  background: #f7fafc;
+  border-radius: 0.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.75rem;
+}
+
+.commentForm button {
+  max-width: 150px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #4a5568;
+  border: 1px solid #a0aec0;
+  border-radius: 0.25rem;
+  background: transparent;
+  padding: 0.35rem 0.75rem;
+}
+
+.username {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.commentDate {
+  font-size: 0.6em;
+  font-style: italic;
+}
+
+.footer {
+  font-family: var(--poppins-font);
+  font-size: 18px;
+  padding: 5vh 7%;
+  margin-top: 50px;
+  border-top: solid 2px #111;
+}
+
+@media only screen and (max-width: 760px) {
+  .main-section {
+    padding: 0.01rem;
+  }
+
+  .display-item-block,
+  .display-item-block-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
