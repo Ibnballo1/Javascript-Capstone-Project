@@ -15,7 +15,6 @@ Then cd into webpack.
 
 # Authors
 :adult: Abdullateef Bello
-:adult: Guishny Desor
 - GitHub: [@Ibnballo1](https://github.com/Ibnballo1/)
 - Linkedin: [Abdullateef Bello](https://www.linkedin.com/in/abdullateef-bello-1b8006228/)
 
